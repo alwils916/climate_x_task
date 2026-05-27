@@ -1,0 +1,8 @@
+cx_venv/
+__pycache__/
+*.pyc
+*.env
+*.python-version
+api_key.txt
+*.ipynb
+*.DS_Store
