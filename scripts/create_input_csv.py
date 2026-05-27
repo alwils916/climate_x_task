@@ -5,7 +5,7 @@ import pandas as pd
 #
 
 # Use relative path
-fn = "../data/CX_Task_Portfolio_Summary.xlsx"
+fn = "../data/CX_Task_Portfolio_Summary_modified.xlsx"
 df = pd.read_excel(fn, sheet_name="Upload")
 
 ### Fix minor data issues

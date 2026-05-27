@@ -16,7 +16,7 @@ steps = [
 
 # Set desired scenarios and return intervals
 SCENARIO = "ssp370"
-RETURN = [10, 50, 100, 200, 500]
+RETURN = [10, 50, 100, 200, 500] # None
 
 # Set API urls, headers, and API key
 BASE_URL = "https://apis.climate-x.com/main"

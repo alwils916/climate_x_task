@@ -5,4 +5,4 @@ __pycache__/
 *.python-version
 api_key.txt
 *.ipynb
-*.DS_Store
+.DS_Store/

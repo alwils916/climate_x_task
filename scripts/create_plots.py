@@ -3,7 +3,7 @@ import geopandas as gpd
 import folium
 from shapely.geometry import Point
 
-df = pd.read_csv('../data/api_csv_output_ssp370_10_50_100_200_500.csv')
+df = pd.read_csv('../data/api_csv_output_ssp370_None.csv')
 
 locations = df[['Asset ID', 'Latitude', 'Longitude']].drop_duplicates()
 gdf = gpd.GeoDataFrame(
