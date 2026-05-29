@@ -1,9 +1,9 @@
 cx_venv/
 __pycache__/
+.DS_Store
+uncleaned_data/
 *.pyc
 *.env
 *.python-version
 api_key.txt
 *.ipynb
-.DS_Store/
-data/uncleaned_data/
