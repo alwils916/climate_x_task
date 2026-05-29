@@ -19,3 +19,7 @@ python create_input_csv.py
 ```
 python collect_climate_data.py
 ```
+5. Create plots and document tables as desired
+```
+python create_plots_and_table.py
+```

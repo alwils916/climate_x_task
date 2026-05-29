@@ -52,13 +52,15 @@ for _, row in gdf.iterrows():
 
 m.save("../data/asset_locations.html")
 
-import pandas as pd
-import matplotlib.pyplot as plt
 
+# Save document table
 df = pd.read_csv('../data/api_csv_output_ssp370_None.csv')
 df.query('Year == 2050').sort_values(by="Asset ID", ascending=True)[
     ['Asset ID', 'Coastal Flood Severity Value (maximum depth (m))','Building Replacement Cost', 'Total Building Loss', 'Total Loss Percentage',
      ]].to_csv('../data/2050_projections.csv', index=False)
+
+
+# Create flood plot over time
 df_rp = pd.read_csv('../data/api_csv_output_ssp370_10_50_100_200_500.csv')
 ids = [2, 7, 6]
 subset = df_rp.query('`Asset ID` in @ids and `Return Period` == "1 in 50"').copy()
