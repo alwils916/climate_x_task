@@ -5,7 +5,7 @@ import pandas as pd
 #
 
 # Use relative path
-fn = "../data/CX_Task_Portfolio_Summary_modified.xlsx"
+fn = "../data/CX_Task_Portfolio_Summary.xlsx"
 df = pd.read_excel(fn, sheet_name="Upload")
 
 ### Fix minor data issues
@@ -56,6 +56,21 @@ for col in missing_cols:
 
 # Reorder to match template order
 df = df[required_cols]
+
+# Manual Adjustments for assets 5 and 10 following review
+df.loc[(df['Id'] == 5), 'City'] = pd.NA
+df.loc[(df['Id'] == 5), 'Street'] = pd.NA
+df.loc[(df['Id'] == 5), 'Post Code'] = pd.NA
+df.loc[(df['Id'] == 5), 'Building Number'] = pd.NA
+df.loc[(df['Id'] == 5), 'Latitude'] = 52.84834716	
+df.loc[(df['Id'] == 5), 'Longitude'] = 0.116686885
+
+df.loc[(df['Id'] == 10), 'City'] = pd.NA
+df.loc[(df['Id'] == 10), 'Street'] = pd.NA
+df.loc[(df['Id'] == 10), 'Post Code'] = pd.NA
+df.loc[(df['Id'] == 10), 'Building Number'] = pd.NA
+df.loc[(df['Id'] == 10), 'Latitude'] = 53.05008148		
+df.loc[(df['Id'] == 10), 'Longitude'] = 0.158874125
 
 # Save to .csv to use for API data pull
 df.to_csv("../data/api_csv_input.csv", index=False)

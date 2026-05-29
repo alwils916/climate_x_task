@@ -6,3 +6,4 @@ __pycache__/
 api_key.txt
 *.ipynb
 .DS_Store/
+data/uncleaned_data/
